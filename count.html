@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="count.css">
+  <title>カウンターアプリ</title>
+</head>
+
+<body>
+  <h1>Counter</h1>
+  <div id="disp-count">0</div>
+  <div class="button">
+    <button id="up">カウントアップ</button>
+    <button id="down">カウントダウン</button>
+  </div>
+  <script>
+    let disp_count = document.getElementById("disp-count");
+    let up = document.getElementById("up");
+    let down = document.getElementById("down");
+    let count = 0;
+
+    up.addEventListener("click", function () {
+      count += 1
+      disp_count.innerHTML = count;
+    })
+    down.addEventListener("click", function () {
+      count -= 1
+      disp_count.innerHTML = count;
+
+    })
+
+
+  </script>
+</body>
+
+</html>
